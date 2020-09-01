@@ -8,30 +8,46 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://kit.fontawesome.com/7fe2c42fbc.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;900&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-	<div class="bg-parallax" id="bg-img-1">
+
+	<nav>
+		<div id="navbar">
+			<ul id="main-menu">
+				<li><a href="#welcome" class="menu-item active">Inicio</a></li>
+				<li><a href="#services" class="menu-item">Funcionalidades</a></li>
+				<li><a href="#pros" class="menu-item">Beneficios</a></li>
+				<li><a href="#customers" class="menu-item">Clientes</a></li>
+				<li><a href="#contact" class="menu-item">Contacto</a></li>
+			</ul>
+		</div>
+	</nav>
+	
+	<div class="bg-parallax section scrollspy" id="bg-img-1">
 		<img src="vetlyLogo.png" alt="Vetly Logo" id="logo">
 		
 		<div class="caption">
 			<a href="">
-				<i class="fas fa-arrow-down"></i>
+				<i class="fas fa-arrow-down" id="arrow"></i>
 			</a>
 	  		
 	  	</div>
 	</div>
-	<header>
-	<div id="welcome">
+	
+	<div id="welcome" class="section scrollspy">
+		<header>
 		<div>
 			<span>Bienvenido a</span>
 			<h1>Vetly</h1>
 		</div>
+		</header>
 	  	<p>
 	  		Queremos ayudar a las veterinarias y dueños en el cuidado de sus mascotas atraves de nuestro sistema de informacion, dando las herramientas de control y seguimiento necesarias. Interactuamos con los dueños de mascotas de forma automatica con notificaciones, recodatorios de vacunas y lo mas importante tener registro actualizado y la mano sobre su mascota. 
 		</p>
 	</div>
-	</header>
-	<div id="services">
+	
+	<div id="services" class="section scrollspy">
 		<h2>Principales funcionalidades</h2>
 		<p>Tenemos todo lo que necesitas para ayudarte con el control y tratamiento de la informacion para tu veterinaria, entre nuestras funciones mas destacados puedes encontrar:</p>
 		<div class="services">
@@ -104,7 +120,7 @@
 			<a href="#">Quiero tener vetly</a>
 		</div>
 	</div>
-	<div id="pros">
+	<div id="pros" class="section scrollspy">
 		<div class="services">
 			<div class="card-container">
 			<div class="card">
@@ -141,7 +157,7 @@
 		
 	</div>
 	
-	<div id="customers">
+	<div id="customers" class="section scrollspy">
 		<h2>Nuestros Clientes</h2>
 		<div class="logos">
 			<img class="thumb" src="customers/vetly_logos-11.jpg">
@@ -158,7 +174,7 @@
 		</div>
 	</div>
 	<footer>
-	<div class="bg-parallax contact" id="bg-img-3">
+	<div class="bg-parallax section scrollspy" id="contact">
 		<h2>Contactanos</h2>
 		<div id="contact-form">
 			<div class="form">
@@ -202,5 +218,15 @@
 		
 	</div>
 	</footer>
+	<script src="simple-scrollspy.min.js"></script>
+<script>
+  window.onload = function () {
+    scrollSpy('#main-menu', {
+      sectionClass: '.scrollspy',
+      menuActiveTarget: '.menu-item',
+      offset: 100
+    })
+  }
+</script>
 </body>
 </html>
